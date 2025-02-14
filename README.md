@@ -4,36 +4,34 @@
 ### Bootcamp: Machine Learning Practitioner - Fevereiro de 2025
 ### Prova: Redução de Dimensionalidade em Imagens para Redes Neurais
 
-Este projeto realiza a conversão de uma imagem colorida para escala de cinza e, em seguida, para preto e branco (binário). A redução de dimensionalidade facilita o treinamento de redes neurais, tornando o modelo mais eficiente.
+Este projeto converte uma imagem colorida para escala de cinza e depois para preto e branco (binário). O objetivo é demonstrar a redução de dimensionalidade, facilitando o treinamento de redes neurais.
 
 ## Requisitos:
-- Google Colab
-- Conta no Google Drive
+- Python 3
 - Biblioteca Pillow (PIL)
 
 ## Objetivos:
-1. Carregar uma imagem a partir do Google Drive
+1. Carregar a imagem `lenna2.jpg` (mesma pasta do script)
 2. Converter para escala de cinza
-3. Converter para preto e branco (binarização)
-4. Salvar as versões processadas no Google Drive
+3. Converter para preto e branco
+4. Salvar as versões processadas no mesmo diretório
 
 ## Como Executar:
-1. Faça upload da imagem (lenna2.jpg) no seu Google Drive, no caminho `/MyDrive/dio/`
-2. Cole o código Python em uma célula do Google Colab
-3. Execute a célula
-4. Verifique os arquivos gerados no Google Drive (`escaladecinza.jpg` e `PB.jpg`)
+1. Coloque `lenna2.jpg` no mesmo diretório do script
+2. Execute o script Python
+3. Verifique os arquivos gerados (`escaladecinza.jpg` e `PB.jpg`)
 
 ## Explicação das Etapas:
-- **Escala de Cinza:** Converte a imagem para tons de cinza usando a fórmula de luminância padrão:
+- **Escala de Cinza:** Converte com a fórmula de luminância padrão:
   `gray = 0.299*R + 0.587*G + 0.114*B`
-- **Preto e Branco:** Realiza binarização aplicando um limiar (threshold) fixo. 
+- **Preto e Branco:** Realiza binarização com limiar fixo:
   `bw = 255 if gray > 128 else 0`
 
 ## Impacto na Redução de Dimensionalidade:
-- Reduz o número de canais (de 3 para 1)
-- Diminui a complexidade computacional
-- Facilita a detecção de padrões essenciais para redes neurais
+- Reduz de 3 canais para 1 canal
+- Diminui o custo computacional
+- Facilita a extração de padrões para redes neurais
 
 ## Resultados Esperados:
 - `escaladecinza.jpg`: Imagem em tons de cinza
-- `PB.jpg`: Imagem em preto e branco binária
+- `PB.jpg`: Imagem binária (preto e branco)
